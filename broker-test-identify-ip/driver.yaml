@@ -1,0 +1,26 @@
+output_filename: broker-test-identify-ip.c4z
+driver_xml: driver.xml
+main: driver.lua
+
+includes:
+  folders:
+  libraries: 
+    - source: ../source
+      alias: source
+  documentation: ../documentation/documentation.md
+
+update_modified: true
+squish: true
+encrypt: true
+allow_execution: false
+
+build_configurations:
+  - name: production
+    encrypt: true
+    allow_execution: false
+  - name: debug # needs /etc/features/lrdb and /etc/features/big_bend_jr
+    encrypt: true
+    allow_execution: true
+  - name: develop # needs /etc/features/lrdb and /etc/features/big_bend_jr
+    encrypt: false
+    allow_execution: true

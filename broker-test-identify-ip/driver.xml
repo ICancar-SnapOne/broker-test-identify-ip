@@ -1,0 +1,80 @@
+<devicedata>
+  <copyright>Copyright 2025 Snap One, LLC. All rights reserved.</copyright>
+  <creator>Control4</creator>
+  <manufacturer>Control4</manufacturer>
+  <name>Broker Test Identify IP</name>
+  <model>Template</model>
+  <search_type>c4:search-type</search_type>
+  <created>11/23/2020 12:00 AM</created>
+  <modified>11/23/2020 12:00 AM</modified>
+  <version>1</version>
+  <small>devices_sm\c4.gif</small>
+  <large>devices_lg\c4.gif</large>
+  <control>lua_gen</control>
+  <controlmethod></controlmethod>
+  <minimum_os_version>3.2.0</minimum_os_version>
+  <force_auto_update>false</force_auto_update>
+  <combo>True</combo>
+  <OnlineCategory>others</OnlineCategory>
+  <!-- Specifes a category when searching this driver in Composer Pro's Search Items view -->
+  <composer_categories>
+  </composer_categories>
+  <proxies qty="1">
+    <proxy>template-driver</proxy>
+  </proxies>
+  <driver>DriverWorks</driver>
+  <capabilities>
+  </capabilities>
+  <connections>
+  </connections>
+  <!-- Designates other drivers as "dependent" and force those drivers to load into a project
+    simultaneously. Can also be used to have these driver automatically bind when they enter the
+    project. -->
+  <dependencies>
+  </dependencies>
+  <conditionals>
+  </conditionals>
+  <events>
+  </events>
+  <config>
+    <documentation file="www/documentation/documentation.html"></documentation>
+    <!-- to encrypt set attribute in script tag to encryption="2" -->
+    <script file="driver.lua" jit="1"></script>
+    <identify_text></identify_text>
+    <identify_image></identify_image>
+    <actions>
+    </actions>
+    <commands>
+    </commands>
+    <properties>
+      <property>
+        <name>Log Level</name>
+        <type>LIST</type>
+        <readonly>false</readonly>
+        <default>5 - Trace</default>
+        <items>
+          <item>0 - Fatal</item>
+          <item>1 - Error</item>
+          <item>2 - Warning</item>
+          <item>3 - Info</item>
+          <item>4 - Debug</item>
+          <item>5 - Trace</item>
+        </items>
+      </property>
+      <property>
+        <name>Log Mode</name>
+        <type>LIST</type>
+        <readonly>false</readonly>
+        <default>Off</default>
+        <items>
+          <item>Off</item>
+          <item>Print</item>
+          <item>Log</item>
+          <item>Print and Log</item>
+        </items>
+      </property>
+    </properties>
+    <tabs>
+    </tabs>
+  </config>
+</devicedata>
