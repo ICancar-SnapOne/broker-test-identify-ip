@@ -11,13 +11,13 @@ includes:
 
 update_modified: true
 squish: true
-encrypt: true
-allow_execution: false
+encrypt: false
+allow_execution: true
 
 build_configurations:
   - name: production
-    encrypt: true
-    allow_execution: false
+    encrypt: false
+    allow_execution: true
   - name: debug # needs /etc/features/lrdb and /etc/features/big_bend_jr
     encrypt: true
     allow_execution: true

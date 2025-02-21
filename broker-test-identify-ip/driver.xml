@@ -11,7 +11,7 @@
   <small>devices_sm\c4.gif</small>
   <large>devices_lg\c4.gif</large>
   <control>lua_gen</control>
-  <controlmethod></controlmethod>
+  <controlmethod>ip</controlmethod>
   <minimum_os_version>3.2.0</minimum_os_version>
   <force_auto_update>false</force_auto_update>
   <combo>True</combo>
@@ -26,6 +26,28 @@
   <capabilities>
   </capabilities>
   <connections>
+    <connection>
+      <id>6001</id>
+      <connectionname>IP Connection</connectionname>
+      <type>4</type>
+      <consumer>True</consumer>
+      <keep_connection>True</keep_connection>
+      <audiosource>false</audiosource>
+      <videosource>false</videosource>
+      <classes>
+        <class>
+          <classname>TCP</classname>
+          <ports>
+            <port>
+              <number>55443</number>
+              <auto_connect>True</auto_connect>
+              <monitor_connection>True</monitor_connection>
+              <keep_connection>True</keep_connection>
+            </port>
+          </ports>
+        </class>
+      </classes>
+    </connection>
   </connections>
   <!-- Designates other drivers as "dependent" and force those drivers to load into a project
     simultaneously. Can also be used to have these driver automatically bind when they enter the
@@ -72,6 +94,18 @@
           <item>Log</item>
           <item>Print and Log</item>
         </items>
+      </property>
+      <property>
+        <name>IP Address</name>
+        <type>STRING</type>
+        <readonly>false</readonly>
+        <default></default>
+      </property>
+      <property>
+        <name>Connection status</name>
+        <type>STRING</type>
+        <readonly>true</readonly>
+        <default></default>
       </property>
     </properties>
     <tabs>
