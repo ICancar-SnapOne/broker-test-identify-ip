@@ -12,7 +12,7 @@ function OnDriverLateInit()
     print("OnDriverLateInit")
     UpdateIPAddressProperty()
     C4:NetConnect(IP_BINDING_ID, PORT, "TCP")
-    onlineStatus = C4:GetNetworkBindingsByDevice(53).networkbindings[1].status
+    onlineStatus = C4:GetNetworkBindingsByDevice(C4:GetDeviceID()).networkbindings[1].status
     print("Online status: ", onlineStatus)
     C4:UpdateProperty(CONNECTION_STATUS_PROPERTY_NAME, onlineStatus)
 end
