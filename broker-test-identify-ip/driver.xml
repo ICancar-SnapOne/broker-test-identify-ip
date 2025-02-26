@@ -99,10 +99,10 @@
         <name>IP Address</name>
         <type>STRING</type>
         <readonly>false</readonly>
-        <default></default>
+        <default>192.168.1.202</default>
       </property>
       <property>
-        <name>Connection status</name>
+        <name>Network Connection Status</name>
         <type>STRING</type>
         <readonly>true</readonly>
         <default></default>
